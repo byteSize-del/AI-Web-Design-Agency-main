@@ -19,18 +19,9 @@ export const Navbar = () => {
     <>
       <nav className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 sm:px-6">
         <div className="w-full max-w-7xl flex items-center justify-center">
-          <div className="liquid-glass rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2 sm:gap-8">
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden p-2 text-white/60 hover:text-white transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-foreground/90">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex liquid-glass rounded-full px-6 py-3 items-center gap-8">
+            <div className="flex items-center gap-6 text-base font-medium text-foreground/90">
               {links.map(link => (
                 <Link
                   key={link.name}
@@ -43,10 +34,28 @@ export const Navbar = () => {
             </div>
 
             <MagneticButton>
-              <Link to="/contact" className="bg-white text-black rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm font-medium flex items-center gap-1.5 sm:gap-2 hover:bg-white/90 transition-colors whitespace-nowrap">
-                <span className="hidden sm:inline">Book a Call</span>
-                <span className="sm:hidden">Book</span>
-                <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <Link to="/contact" className="bg-white text-black rounded-full px-5 py-2.5 text-sm font-medium flex items-center gap-2 hover:bg-white/90 transition-colors">
+                Book a Call
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </MagneticButton>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="lg:hidden liquid-glass rounded-full px-4 py-2.5 flex items-center justify-between w-full">
+            <button
+              className="p-2 text-white/60 hover:text-white transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+
+            <MagneticButton>
+              <Link to="/contact" className="bg-white text-black rounded-full px-4 py-2 text-sm font-medium flex items-center gap-1.5 hover:bg-white/90 transition-colors whitespace-nowrap">
+                <span className="hidden xs:inline">Book a Call</span>
+                <span className="xs:hidden">Book</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </MagneticButton>
           </div>
