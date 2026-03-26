@@ -17,11 +17,11 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 sm:px-6">
+      {/* Desktop Navigation - Original Style */}
+      <nav className="hidden lg:block fixed top-4 left-0 right-0 z-50 flex justify-center px-6">
         <div className="w-full max-w-7xl flex items-center justify-center">
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex liquid-glass rounded-full px-8 py-4 items-center gap-8">
-            <div className="flex items-center gap-8 text-base font-medium text-foreground/90">
+          <div className="liquid-glass rounded-full px-6 py-3 flex items-center gap-8">
+            <div className="flex items-center gap-6 text-sm font-medium text-foreground/90">
               {links.map(link => (
                 <Link
                   key={link.name}
@@ -34,15 +34,19 @@ export const Navbar = () => {
             </div>
 
             <MagneticButton>
-              <Link to="/contact" className="bg-white text-black rounded-full px-5 py-2.5 text-sm font-medium flex items-center gap-2 hover:bg-white/90 transition-colors">
+              <Link to="/contact" className="bg-white text-black rounded-full px-5 py-2 text-sm font-medium flex items-center gap-2 hover:bg-white/90 transition-colors">
                 Book a Call
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
             </MagneticButton>
           </div>
+        </div>
+      </nav>
 
-          {/* Mobile Navigation */}
-          <div className="lg:hidden liquid-glass rounded-full px-4 py-2.5 flex items-center justify-between w-full">
+      {/* Mobile Navigation */}
+      <nav className="lg:hidden fixed top-4 left-0 right-0 z-50 flex justify-center px-4 sm:px-6">
+        <div className="w-full max-w-7xl flex items-center justify-center">
+          <div className="liquid-glass rounded-full px-4 py-2.5 flex items-center justify-between w-full">
             <button
               className="p-2 text-white/60 hover:text-white transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
