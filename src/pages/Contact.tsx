@@ -22,8 +22,9 @@ export const Contact = () => {
         
         {/* Left Column */}
         <div className="flex-1">
-          <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white font-body inline-block mb-6">Let's Talk</div>
-          <BlurText text="Start your next project." className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-8" />
+          <h1 className="sr-only">Contact Us | Book Your Free Web Design Consultation</h1>
+        <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white font-body inline-block mb-6">Let's Talk</div>
+          <BlurText text="Start your next project." className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-8" aria-label="Start your next project" />
           <p className="text-white/60 font-body font-light text-lg mb-12 max-w-md">
             Whether you have a clear vision or just an idea, our AI-powered team is ready to bring it to life.
           </p>

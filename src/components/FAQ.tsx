@@ -27,6 +27,9 @@ export const FAQ = () => {
   return (
     <div className="w-full max-w-3xl mx-auto mt-32">
       <h2 className="text-3xl md:text-4xl font-heading italic text-white mb-10 text-center">Frequently Asked Questions</h2>
+      <div className="sr-only">
+        <p>Common questions about our AI web design services, delivery timeline, ownership, and integrations.</p>
+      </div>
       <div className="flex flex-col gap-4">
         {faqs.map((faq, i) => (
           <div key={i} className="liquid-glass rounded-2xl overflow-hidden">

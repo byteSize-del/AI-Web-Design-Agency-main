@@ -15,7 +15,8 @@ export const Process = () => {
       <div className="pt-40 pb-24 px-6 md:px-16 lg:px-24 max-w-4xl mx-auto min-h-screen">
         <div className="text-center mb-20">
           <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white font-body inline-block mb-4">How We Work</div>
-          <BlurText text="The Process" className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9]" />
+          <h1 className="sr-only">Our Web Design Process | AI-Assisted Development</h1>
+          <BlurText text="The Process" className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9]" aria-label="The Process" />
         </div>
         <div className="flex flex-col gap-8">
           {steps.map((s, i) => (

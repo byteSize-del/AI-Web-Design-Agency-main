@@ -25,9 +25,11 @@ export const Hero = () => {
           Introducing AI-powered web design.
         </div>
         
-        <BlurText 
-          text="The Website Your Brand Deserves" 
+        <h1 className="sr-only">AI Web Design Agency | Custom AI-Powered Websites</h1>
+        <BlurText
+          text="The Website Your Brand Deserves"
           className="text-6xl md:text-7xl lg:text-[5.5rem] font-heading italic text-foreground leading-[0.8] tracking-[-4px] mb-8"
+          aria-label="The Website Your Brand Deserves"
         />
         
         <motion.p 

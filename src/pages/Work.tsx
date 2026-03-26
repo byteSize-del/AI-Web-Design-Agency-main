@@ -11,7 +11,8 @@ export const Work = () => {
       <div className="pt-40 pb-24 px-6 md:px-16 lg:px-24 max-w-7xl mx-auto min-h-screen">
         <div className="text-center mb-20">
           <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white font-body inline-block mb-4">Selected Work</div>
-          <BlurText text="Our Portfolio" className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9]" />
+          <h1 className="sr-only">Our Portfolio | AI Web Design Projects & Case Studies</h1>
+          <BlurText text="Our Portfolio" className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9]" aria-label="Our Portfolio" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((p, i) => (

@@ -32,13 +32,14 @@ export const Pricing = () => {
       <div className="pt-40 pb-24 px-6 md:px-16 lg:px-24 max-w-7xl mx-auto min-h-screen">
         <div className="text-center mb-20">
           <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white font-body inline-block mb-4">Pricing</div>
-          <BlurText text="Simple, transparent pricing." className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9]" />
+          <h1 className="sr-only">Web Design Pricing | Affordable AI-Powered Websites from $2,999</h1>
+          <BlurText text="Simple, transparent pricing." className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9]" aria-label="Simple, transparent pricing." />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {plans.map((p, i) => (
-            <div key={i} className={`liquid-glass rounded-3xl p-8 flex flex-col ${p.popular ? 'ring-1 ring-white/30 relative' : ''}`}>
+            <div key={i} className={`liquid-glass rounded-3xl p-8 flex flex-col ${p.popular ? 'ring-1 ring-white/30 relative pt-10' : ''}`}>
               {p.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full whitespace-nowrap z-10">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full whitespace-nowrap z-10 -translate-y-1/2">
                   Most Popular
                 </div>
               )}
