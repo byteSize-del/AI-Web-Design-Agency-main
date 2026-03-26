@@ -17,8 +17,7 @@ export const Navbar = () => {
 
   return (
     <>
-      {/* Desktop Navigation - Original Style */}
-      <nav className="hidden lg:block fixed top-4 left-0 right-0 z-50 flex justify-center px-6">
+      <nav className="fixed top-4 left-0 right-0 z-50 flex justify-center px-6">
         <div className="w-full max-w-7xl flex items-center justify-center">
           <div className="liquid-glass rounded-full px-6 py-3 flex items-center gap-8">
             <div className="flex items-center gap-6 text-sm font-medium text-foreground/90">
@@ -37,29 +36,6 @@ export const Navbar = () => {
               <Link to="/contact" className="bg-white text-black rounded-full px-5 py-2 text-sm font-medium flex items-center gap-2 hover:bg-white/90 transition-colors">
                 Book a Call
                 <ArrowUpRight className="w-4 h-4" />
-              </Link>
-            </MagneticButton>
-          </div>
-        </div>
-      </nav>
-
-      {/* Mobile Navigation */}
-      <nav className="lg:hidden fixed top-4 left-0 right-0 z-50 flex justify-center px-4 sm:px-6">
-        <div className="w-full max-w-7xl flex items-center justify-center">
-          <div className="liquid-glass rounded-full px-4 py-2.5 flex items-center justify-between w-full">
-            <button
-              className="p-2 text-white/60 hover:text-white transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-
-            <MagneticButton>
-              <Link to="/contact" className="bg-white text-black rounded-full px-4 py-2 text-sm font-medium flex items-center gap-1.5 hover:bg-white/90 transition-colors whitespace-nowrap">
-                <span className="hidden xs:inline">Book a Call</span>
-                <span className="xs:hidden">Book</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </MagneticButton>
           </div>
@@ -100,6 +76,17 @@ export const Navbar = () => {
           </div>
         </>
       )}
+
+      {/* Mobile Hamburger Button - Hidden on Desktop */}
+      <div className="lg:hidden fixed top-4 left-4 z-50">
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-colors"
+          aria-label="Toggle menu"
+        >
+          {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </button>
+      </div>
     </>
   );
 };
