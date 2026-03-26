@@ -20,20 +20,22 @@ export const Navbar = () => {
       {/* Desktop Navbar - Original Style */}
       <nav className="fixed top-4 left-0 right-0 z-50 flex justify-center px-6">
         <div className="w-full max-w-7xl flex items-center justify-center">
-          <div className="liquid-glass rounded-full px-6 py-3 flex items-center gap-8">
-            <div className="flex items-center gap-6 text-base font-body font-medium text-white/90">
-              {links.map(link => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className={`transition-colors ${location.pathname === link.path ? 'text-white' : 'text-white/60 hover:text-white'}`}
-                >
-                  {link.name}
-                </Link>
-              ))}
+          <div className="liquid-glass relative rounded-full px-6 py-3 min-h-[64px] flex items-center justify-end">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-6">
+              <div className="pointer-events-auto flex items-center gap-6 text-base font-body font-medium text-white/90">
+                {links.map(link => (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className={`transition-colors ${location.pathname === link.path ? 'text-white' : 'text-white/60 hover:text-white'}`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            <MagneticButton>
+            <MagneticButton className="relative z-10">
               <Link to="/contact" className="bg-white text-black rounded-full px-5 py-2 text-base font-body font-medium flex items-center gap-2 hover:bg-white/90 transition-colors">
                 Book a Call
                 <ArrowUpRight className="w-4 h-4" />
