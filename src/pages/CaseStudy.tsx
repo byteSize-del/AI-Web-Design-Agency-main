@@ -19,41 +19,41 @@ export const CaseStudy = () => {
 
   return (
     <PageTransition>
-      <div className="pt-32 pb-24 px-6 md:px-16 lg:px-24 max-w-7xl mx-auto min-h-screen">
-        
-        <Link to="/work" className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors mb-12 font-body text-sm">
-          <ArrowLeft className="w-4 h-4" /> Back to Work
+      <div className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 md:px-16 lg:px-24 max-w-7xl mx-auto min-h-screen">
+
+        <Link to="/work" className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors mb-6 sm:mb-8 md:mb-12 font-body text-sm">
+          <ArrowLeft className="w-4 h-4" /> <span className="hidden xs:inline">Back to Work</span><span className="xs:inline">Back</span>
         </Link>
 
-        <div className="mb-16">
-          <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white font-body inline-block mb-6">{project.category}</div>
-          <BlurText text={project.name} className="text-6xl md:text-7xl lg:text-8xl font-heading italic text-white tracking-tight leading-[0.9] mb-8" />
-          <p className="text-white/80 font-body text-xl max-w-2xl leading-relaxed">
+        <div className="mb-12 sm:mb-14 md:mb-16">
+          <div className="liquid-glass rounded-full px-3 py-1 sm:px-3.5 sm:py-1 text-[10px] sm:text-xs font-medium text-white font-body inline-block mb-4 sm:mb-6">{project.category}</div>
+          <BlurText text={project.name} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-6 sm:mb-8" />
+          <p className="text-white/80 font-body text-base sm:text-xl max-w-2xl leading-relaxed">
             {project.description}
           </p>
         </div>
 
-        <div className="w-full aspect-video rounded-3xl overflow-hidden mb-20 relative">
+        <div className="w-full aspect-video rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden mb-12 sm:mb-16 md:mb-20 relative">
           <img src={project.image} alt={project.name} referrerPolicy="no-referrer" className="w-full h-full object-cover" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
           <div className="lg:col-span-2">
-            <h3 className="text-3xl font-heading italic text-white mb-6">The Prompt</h3>
-            <div className="liquid-glass rounded-2xl p-8 border border-white/10">
-              <p className="font-mono text-white/80 leading-relaxed">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-heading italic text-white mb-4 sm:mb-6">The Prompt</h3>
+            <div className="liquid-glass rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-white/10">
+              <p className="font-mono text-sm sm:text-base text-white/80 leading-relaxed">
                 "{project.prompt}"
               </p>
             </div>
           </div>
-          
+
           <div>
-            <h3 className="text-3xl font-heading italic text-white mb-6">The Impact</h3>
-            <div className="flex flex-col gap-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-heading italic text-white mb-4 sm:mb-6">The Impact</h3>
+            <div className="flex flex-col gap-3 sm:gap-4">
               {project.metrics.map((metric, i) => (
-                <div key={i} className="liquid-glass rounded-2xl p-6 flex flex-col">
-                  <span className="text-white/50 font-body text-sm mb-2">{metric.label}</span>
-                  <span className="text-4xl font-heading italic text-white">{metric.value}</span>
+                <div key={i} className="liquid-glass rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col">
+                  <span className="text-white/50 font-body text-xs sm:text-sm mb-2">{metric.label}</span>
+                  <span className="text-2xl sm:text-3xl md:text-4xl font-heading italic text-white">{metric.value}</span>
                 </div>
               ))}
             </div>

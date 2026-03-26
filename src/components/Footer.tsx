@@ -18,20 +18,20 @@ export const Footer = () => {
         <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-t from-black to-transparent" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-4xl">
-        <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-6">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 w-full max-w-4xl">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-4 sm:mb-6">
           Your next website starts here.
         </h2>
-        
-        <p className="font-body font-light text-white/60 text-lg md:text-xl mb-10 max-w-xl">
+
+        <p className="font-body font-light text-white/60 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 md:mb-10 max-w-xl">
           Book a free strategy call. See what AI-powered design can do.
         </p>
-        
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-32">
-          <Link to="/contact" className="liquid-glass-strong rounded-full px-8 py-4 text-white font-body font-medium hover:bg-white/10 transition-colors w-full sm:w-auto">
+
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-16 sm:mb-24 md:mb-32 w-full sm:w-auto">
+          <Link to="/contact" className="liquid-glass-strong rounded-full px-6 sm:px-8 py-3 sm:py-4 text-white font-body font-medium hover:bg-white/10 transition-colors w-full sm:w-auto text-center">
             Book a Call
           </Link>
-          <Link to="/pricing" className="bg-white text-black rounded-full px-8 py-4 font-body font-medium hover:bg-white/90 transition-colors w-full sm:w-auto">
+          <Link to="/pricing" className="bg-white text-black rounded-full px-6 sm:px-8 py-3 sm:py-4 font-body font-medium hover:bg-white/90 transition-colors w-full sm:w-auto text-center">
             View Pricing
           </Link>
         </div>

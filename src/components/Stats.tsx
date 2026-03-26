@@ -26,13 +26,13 @@ export const Stats = () => {
       </div>
 
       <div className="relative z-10 w-full max-w-5xl">
-        <div className="liquid-glass rounded-3xl p-12 md:p-16 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div className="liquid-glass rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center justify-center gap-2">
-              <div className="text-4xl md:text-5xl lg:text-6xl font-heading italic text-white">
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading italic text-white">
                 {stat.value}
               </div>
-              <div className="text-white/60 font-body font-light text-sm uppercase tracking-wider">
+              <div className="text-white/60 font-body font-light text-xs sm:text-sm uppercase tracking-wider">
                 {stat.label}
               </div>
             </div>

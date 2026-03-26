@@ -25,24 +25,25 @@ export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-full max-w-3xl mx-auto mt-32">
-      <h2 className="text-3xl md:text-4xl font-heading italic text-white mb-10 text-center">Frequently Asked Questions</h2>
+    <div className="w-full max-w-3xl mx-auto mt-12 sm:mt-20 md:mt-32 px-4 sm:px-6">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading italic text-white mb-6 sm:mb-10 text-center">Frequently Asked Questions</h2>
       <div className="sr-only">
         <p>Common questions about our AI web design services, delivery timeline, ownership, and integrations.</p>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-3 sm:gap-4">
         {faqs.map((faq, i) => (
-          <div key={i} className="liquid-glass rounded-2xl overflow-hidden">
-            <button 
-              className="w-full px-6 py-5 flex items-center justify-between text-left"
+          <div key={i} className="liquid-glass rounded-xl sm:rounded-2xl overflow-hidden">
+            <button
+              className="w-full px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between text-left min-h-[60px]"
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
             >
-              <span className="text-lg font-heading italic text-white">{faq.question}</span>
+              <span className="text-base sm:text-lg font-heading italic text-white pr-8">{faq.question}</span>
               <motion.div
                 animate={{ rotate: openIndex === i ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
+                className="shrink-0"
               >
-                <ChevronDown className="w-5 h-5 text-white/50" />
+                <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-white/50" />
               </motion.div>
             </button>
             <AnimatePresence>
@@ -53,7 +54,7 @@ export const FAQ = () => {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
-                  <div className="px-6 pb-5 text-white/60 font-body font-light">
+                  <div className="px-4 sm:px-6 pb-4 sm:pb-5 text-sm sm:text-base text-white/60 font-body font-light">
                     {faq.answer}
                   </div>
                 </motion.div>

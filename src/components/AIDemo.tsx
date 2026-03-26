@@ -31,34 +31,34 @@ export const AIDemo = () => {
   }, [isGenerating]);
 
   return (
-    <section className="py-24 px-6 w-full max-w-5xl mx-auto">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-heading italic text-white mb-4">Experience the Magic</h2>
-        <p className="text-white/60 font-body font-light">Type a prompt and watch our AI assemble a layout in real-time.</p>
+    <section className="py-12 sm:py-24 px-4 sm:px-6 w-full max-w-5xl mx-auto">
+      <div className="text-center mb-8 sm:mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading italic text-white mb-3 sm:mb-4">Experience the Magic</h2>
+        <p className="text-white/60 font-body font-light text-sm sm:text-base">Type a prompt and watch our AI assemble a layout in real-time.</p>
       </div>
 
-      <div className="liquid-glass rounded-3xl p-2 md:p-4 border border-white/10 shadow-2xl">
-        <div className="bg-black/50 rounded-2xl p-6 min-h-[400px] flex flex-col relative overflow-hidden">
-          
+      <div className="liquid-glass rounded-2xl sm:rounded-3xl p-2 sm:p-4 border border-white/10 shadow-2xl">
+        <div className="bg-black/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 min-h-[400px] flex flex-col relative overflow-hidden">
+
           {/* Input Area */}
-          <form onSubmit={handleGenerate} className="relative z-10 flex gap-4 mb-8">
+          <form onSubmit={handleGenerate} className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div className="relative flex-grow">
-              <div className="absolute left-4 top-1/2 -translate-y-1/2">
-                <Sparkles className="w-5 h-5 text-white/40" />
+              <div className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2">
+                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-white/40" />
               </div>
-              <input 
-                type="text" 
+              <input
+                type="text"
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 placeholder="e.g. A dark mode portfolio for a 3D artist..."
-                className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-12 pr-6 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 font-body transition-all"
+                className="w-full bg-white/5 border border-white/10 rounded-full py-3 sm:py-4 pl-10 sm:pl-12 pr-4 sm:pr-6 text-sm sm:text-base text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 font-body transition-all"
                 disabled={isGenerating || step === 4}
               />
             </div>
-            <button 
+            <button
               type="submit"
               disabled={isGenerating || !prompt || step === 4}
-              className="bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
+              className="bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shrink-0 w-full sm:w-auto"
             >
               Generate
             </button>
