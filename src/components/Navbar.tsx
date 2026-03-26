@@ -21,7 +21,7 @@ export const Navbar = () => {
       <nav className="fixed top-4 left-0 right-0 z-50 flex justify-center px-6">
         <div className="w-full max-w-7xl flex items-center justify-center">
           <div className="liquid-glass rounded-full px-6 py-3 flex items-center gap-8">
-            <div className="flex items-center gap-6 text-base font-medium text-white/90">
+            <div className="flex items-center gap-6 text-base font-body font-medium text-white/90">
               {links.map(link => (
                 <Link
                   key={link.name}
@@ -34,7 +34,7 @@ export const Navbar = () => {
             </div>
 
             <MagneticButton>
-              <Link to="/contact" className="bg-white text-black rounded-full px-5 py-2 text-base font-medium flex items-center gap-2 hover:bg-white/90 transition-colors">
+              <Link to="/contact" className="bg-white text-black rounded-full px-5 py-2 text-base font-body font-medium flex items-center gap-2 hover:bg-white/90 transition-colors">
                 Book a Call
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
@@ -56,7 +56,7 @@ export const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`py-3 px-4 rounded-xl transition-colors ${
+                  className={`py-3 px-4 rounded-xl font-body transition-colors ${
                     location.pathname === link.path
                       ? 'bg-white/10 text-white'
                       : 'text-white/60 hover:text-white hover:bg-white/5'
@@ -68,7 +68,7 @@ export const Navbar = () => {
               ))}
               <Link
                 to="/contact"
-                className="mt-2 bg-white text-black rounded-full px-6 py-3 text-base font-medium text-center hover:bg-white/90 transition-colors"
+                className="mt-2 bg-white text-black rounded-full px-6 py-3 text-base font-body font-medium text-center hover:bg-white/90 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book a Call
