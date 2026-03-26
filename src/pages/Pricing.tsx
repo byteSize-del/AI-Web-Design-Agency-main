@@ -36,9 +36,9 @@ export const Pricing = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {plans.map((p, i) => (
-            <div key={i} className={`liquid-glass rounded-3xl p-8 flex flex-col ${p.popular ? 'ring-1 ring-white/30 relative' : ''}`}>
+            <div key={i} className={`liquid-glass rounded-3xl p-8 flex flex-col ${p.popular ? 'ring-1 ring-white/30 relative pt-12' : ''}`}>
               {p.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full whitespace-nowrap z-10">
                   Most Popular
                 </div>
               )}
